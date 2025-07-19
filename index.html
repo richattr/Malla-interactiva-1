@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Malla Curricular de Química</h1>
+
+        <div class="year">
+            <h2>Primer Año</h2>
+            <div class="semester-container">
+                <div class="semester" id="semester1">
+                    <h3>1° Semestre</h3>
+                    <div class="course" id="algebra_trigonometria" data-credits="4" data-unlocks="calculo_diferencial,fisica_i">
+                        ÁLGEBRA Y TRIGONOMETRÍA (4 créditos)
+                    </div>
+                    <div class="course" id="biologia_celular_molecular" data-credits="3" data-unlocks="bioquimica_i_sem7">
+                        BIOLOGÍA CELULAR Y MOLECULAR (3 créditos)
+                    </div>
+                    <div class="course" id="historia_educacion_pedagogia" data-credits="2" data-unlocks="enfoques_pedagogicos_desarrollo_curricular">
+                        HISTORIA DE LA EDUCACIÓN Y LA PEDAGOGÍA (2 créditos)
+                    </div>
+                    <div class="course" id="ingles1" data-credits="2" data-unlocks="ingles2">
+                        INGLÉS I (2 créditos)
+                    </div>
+                    <div class="course" id="introduccion_quimica" data-credits="3" data-unlocks="fundamentos_quimica">
+                        INTRODUCCIÓN A LA QUÍMICA (3 créditos)
+                    </div>
+                    <div class="course" id="lectura_critica" data-credits="2" data-unlocks="produccion_textual">
+                        LECTURA CRÍTICA (2 créditos)
+                    </div>
+                    <div class="course" id="resolucion_problemas_matematicos" data-credits="2">
+                        RESOLUCIÓN DE PROBLEMAS MATEMÁTICOS (2 créditos)
+                    </div>
+                </div>
+
+                <div class="semester" id="semester2">
+                    <h3>2° Semestre</h3>
+                    <div class="course disabled" id="calculo_diferencial" data-credits="4" data-prerequisites="algebra_trigonometria" data-unlocks="calculo_integral,estadistica">
+                        CÁLCULO DIFERENCIAL (4 créditos)
+                    </div>
+                    <div class="course" id="desarrollo_humano_educacion" data-credits="3" data-unlocks="aprendizaje_intervencion_pedagogica">
+                        DESARROLLO HUMANO Y EDUCACIÓN (3 créditos)
+                    </div>
+                    <div class="course disabled" id="fisica_i" data-credits="3" data-prerequisites="algebra_trigonometria" data-unlocks="fisica_ii">
+                        FÍSICA I (3 créditos)
+                    </div>
+                    <div class="course disabled" id="fundamentos_quimica" data-credits="4" data-prerequisites="introduccion_quimica" data-unlocks="quimica_inorganica">
+                        FUNDAMENTOS DE QUÍMICA (4 créditos)
+                    </div>
+                    <div class="course disabled" id="ingles2" data-credits="2" data-prerequisites="ingles1" data-unlocks="ingles3">
+                        INGLÉS II (2 créditos)
+                    </div>
+                    <div class="course disabled" id="produccion_textual" data-credits="2" data-prerequisites="lectura_critica">
+                        PRODUCCIÓN TEXTUAL (2 créditos)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Segundo Año</h2>
+            <div class="semester-container">
+                <div class="semester" id="semester3">
+                    <h3>3° Semestre</h3>
+                    <div class="course disabled" id="calculo_integral" data-credits="4" data-prerequisites="calculo_diferencial">
+                        CÁLCULO INTEGRAL (4 créditos)
+                    </div>
+                    <div class="course disabled" id="enfoques_pedagogicos_desarrollo_curricular" data-credits="3" data-prerequisites="historia_educacion_pedagogia">
+                        ENFOQUES PEDAGÓGICOS Y DESARROLLO CURRICULAR (3 créditos)
+                    </div>
+                    <div class="course disabled" id="fisica_ii" data-credits="3" data-prerequisites="fisica_i" data-unlocks="fisicoquimica">
+                        FÍSICA II (3 créditos)
+                    </div>
+                    <div class="course" id="formacion_ciudadana_paz" data-credits="2">
+                        FORMACIÓN CIUDADANA PARA LA PAZ (2 créditos)
+                    </div>
+                    <div class="course disabled" id="ingles3" data-credits="2" data-prerequisites="ingles2" data-unlocks="ingles4">
+                        INGLÉS III (2 créditos)
+                    </div>
+                    <div class="course" id="investigacion_praxis_pedagogica" data-credits="0">
+                        INVESTIGACIÓN Y PRAXIS PEDAGÓGICA (0 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_inorganica" data-credits="4" data-prerequisites="fundamentos_quimica" data-unlocks="quimica_analitica,fisicoquimica">
+                        QUÍMICA INORGÁNICA (4 créditos)
+                    </div>
+                </div>
+
+                <div class="semester" id="semester4">
+                    <h3>4° Semestre</h3>
+                    <div class="course disabled" id="aprendizaje_intervencion_pedagogica" data-credits="2" data-prerequisites="desarrollo_humano_educacion" data-unlocks="evaluacion_aprendizaje">
+                        APRENDIZAJE E INTERVENCIÓN PEDAGÓGICA (2 créditos)
+                    </div>
+                    <div class="course" id="didactica_quimica" data-credits="2">
+                        DIDÁCTICA DE LA QUÍMICA (2 créditos)
+                    </div>
+                    <div class="course disabled" id="estadistica" data-credits="3" data-prerequisites="calculo_diferencial">
+                        ESTADÍSTICA (3 créditos)
+                    </div>
+                    <div class="course disabled" id="fisicoquimica" data-credits="3" data-prerequisites="fisica_ii,quimica_inorganica" data-unlocks="quimica_organica2">
+                        FISICOQUÍMICA (3 créditos)
+                    </div>
+                    <div class="course disabled" id="ingles4" data-credits="2" data-prerequisites="ingles3" data-unlocks="ingles5">
+                        INGLÉS IV (2 créditos)
+                    </div>
+                    <div class="course disabled" id="practica_pedagogica_investigativa1" data-credits="3" data-prerequisites-credits="30" data-unlocks="practica_pedagogica_investigativa2">
+                        PRÁCTICA PEDAGÓGICA INVESTIGATIVA I (3 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_analitica" data-credits="4" data-prerequisites="quimica_inorganica" data-unlocks="quimica_analitica2,quimica_organica1">
+                        QUÍMICA ANALÍTICA I (4 créditos)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Tercer Año</h2>
+            <div class="semester-container">
+                <div class="semester" id="semester5">
+                    <h3>5° Semestre</h3>
+                    <div class="course" id="enseñanza_basada_problemas" data-credits="2">
+                        ENSEÑANZA BASADA EN PROBLEMAS (2 créditos)
+                    </div>
+                    <div class="course disabled" id="evaluacion_aprendizaje" data-credits="3" data-prerequisites="aprendizaje_intervencion_pedagogica">
+                        EVALUACIÓN DEL APRENDIZAJE (3 créditos)
+                    </div>
+                    <div class="course disabled" id="ingles5" data-credits="2" data-prerequisites="ingles4" data-unlocks="ingles6">
+                        INGLÉS V (2 créditos)
+                    </div>
+                    <div class="course disabled" id="practica_pedagogica_investigativa2" data-credits="3" data-prerequisites="practica_pedagogica_investigativa1" data-unlocks="practica_pedagogica_investigativa3">
+                        PRÁCTICA PEDAGÓGICA INVESTIGATIVA II (3 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_analitica2" data-credits="4" data-prerequisites="quimica_analitica">
+                        QUÍMICA ANALÍTICA II (4 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_organica1" data-credits="4" data-prerequisites="quimica_analitica" data-unlocks="quimica_organica2">
+                        QUÍMICA ORGÁNICA I (4 créditos)
+                    </div>
+                </div>
+
+                <div class="semester" id="semester6">
+                    <h3>6° Semestre</h3>
+                    <div class="course" id="educacion_intercultural_inclusiva" data-credits="2">
+                        EDUCACIÓN INTERCULTURAL E INCLUSIVA (2 créditos)
+                    </div>
+                    <div class="course disabled" id="electiva1" data-credits="2" data-prerequisites-credits="45" data-unlocks="electiva2_sem7">
+                        ELECTIVA 1 (2 créditos)
+                    </div>
+                    <div class="course disabled" id="ingles6" data-credits="2" data-prerequisites="ingles5">
+                        INGLÉS VI (2 créditos)
+                    </div>
+                    <div class="course" id="mediaciones_tecnologicas_quimica" data-credits="2">
+                        MEDIACIONES TECNOLÓGICAS EN LA QUÍMICA (2 créditos)
+                    </div>
+                    <div class="course disabled" id="practica_pedagogica_investigativa3" data-credits="5" data-prerequisites="practica_pedagogica_investigativa2" data-unlocks="practica_pedagogica_investigativa4">
+                        PRÁCTICA PEDAGÓGICA INVESTIGATIVA III (5 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_organica2" data-credits="4" data-prerequisites="fisicoquimica,quimica_organica1" data-unlocks="bioquimica_i_sem7,quimica_sostenible">
+                        QUÍMICA ORGÁNICA II (4 créditos)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Cuarto Año</h2>
+            <div class="semester-container">
+                <div class="semester" id="semester7">
+                    <h3>7° Semestre</h3>
+                    <div class="course disabled" id="bioquimica_i_sem7" data-credits="4" data-prerequisites="biologia_celular_molecular,quimica_organica2" data-unlocks="bioquimica_ii">
+                        BIOQUÍMICA I (4 créditos)
+                    </div>
+                    <div class="course disabled" id="electiva2_sem7" data-credits="2" data-prerequisites="electiva1" data-unlocks="electiva3">
+                        ELECTIVA 2 (2 créditos)
+                    </div>
+                    <div class="course" id="espectroscopia" data-credits="2">
+                        ESPECTROSCOPIA (2 créditos)
+                    </div>
+                    <div class="course" id="politicas_gestion_educativa" data-credits="3">
+                        POLÍTICAS Y GESTIÓN EDUCATIVA (3 créditos)
+                    </div>
+                    <div class="course disabled" id="practica_pedagogica_investigativa4" data-credits="5" data-prerequisites="practica_pedagogica_investigativa3" data-unlocks="practica_pedagogica_investigativa5">
+                        PRÁCTICA PEDAGÓGICA INVESTIGATIVA IV (5 créditos)
+                    </div>
+                </div>
+
+                <div class="semester" id="semester8">
+                    <h3>8° Semestre</h3>
+                    <div class="course disabled" id="bioquimica_ii" data-credits="4" data-prerequisites="bioquimica_i_sem7">
+                        BIOQUÍMICA II (4 créditos)
+                    </div>
+                    <div class="course" id="desarrollo_sostenible_educacion" data-credits="2">
+                        DESARROLLO SOSTENIBLE Y EDUCACIÓN (2 créditos)
+                    </div>
+                    <div class="course disabled" id="electiva3" data-credits="2" data-prerequisites="electiva2_sem7">
+                        ELECTIVA 3 (2 créditos)
+                    </div>
+                    <div class="course disabled" id="practica_pedagogica_investigativa5" data-credits="6" data-prerequisites="practica_pedagogica_investigativa4" data-unlocks="practica_profesional">
+                        PRÁCTICA PEDAGÓGICA INVESTIGATIVA V (6 créditos)
+                    </div>
+                    <div class="course disabled" id="quimica_sostenible" data-credits="3" data-prerequisites="quimica_organica2">
+                        QUÍMICA SOSTENIBLE (3 créditos)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="year">
+            <h2>Quinto Año</h2>
+            <div class="semester-container">
+                <div class="semester" id="semester9">
+                    <h3>9° Semestre</h3>
+                    <div class="course disabled" id="practica_profesional" data-credits="18" data-prerequisites="practica_pedagogica_investigativa5">
+                        PRÁCTICA PROFESIONAL (18 créditos)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="total-credits">
+            <h3>Créditos Aprobados: <span id="approved-credits">0</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
