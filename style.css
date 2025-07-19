@@ -1,0 +1,180 @@
+:root {
+    --pastel-green: #B2D8B2; /* Verde pastel principal */
+    --light-green: #CCEECC;   /* Verde más claro para el fondo */
+    --dark-green: #6B8E6B;    /* Verde oscuro para texto o bordes */
+    --light-gray: #F0F0F0;    /* Gris claro para contenedores */
+    --text-color: #333333;    /* Color de texto general */
+    --line-through-color: #A0A0A0; /* Color de la línea de texto tachado */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light-green);
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--dark-green);
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--pastel-green);
+    padding-bottom: 15px;
+}
+
+h2 {
+    color: var(--dark-green);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h3 {
+    color: var(--dark-green);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.year {
+    margin-bottom: 40px;
+}
+
+.semester-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los semestres se ajusten a la línea siguiente en pantallas pequeñas */
+    gap: 30px; /* Espacio entre las columnas de semestres */
+    justify-content: center; /* Centra los semestres */
+}
+
+.semester {
+    flex: 1; /* Permite que los semestres ocupen el espacio disponible */
+    min-width: 280px; /* Ancho mínimo para cada columna */
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido de cada semestre */
+}
+
+.semester h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--pastel-green);
+    padding-bottom: 10px;
+}
+
+.course {
+    background-color: var(--pastel-green);
+    color: white;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ocupa todo el ancho del semestre */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden; /* Para ocultar la línea inicial antes de animarse */
+}
+
+.course:hover:not(.approved):not(.disabled) {
+    background-color: var(--dark-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course.approved {
+    background-color: #8BC34A; /* Un verde más brillante para aprobadas */
+    cursor: default;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text-color); /* Cambia el color del texto para aprobado */
+    text-decoration: line-through;
+    text-decoration-color: var(--line-through-color);
+}
+
+.course.disabled {
+    background-color: #CCCCCC;
+    color: #666666;
+    cursor: not-allowed;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+.course.approved:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--line-through-color);
+    transform: scaleX(0); /* Inicialmente invisible */
+    transition: transform 0.3s ease-out;
+}
+
+.course.approved.animate-line:after {
+    transform: scaleX(1); /* Anima la línea */
+}
+
+
+.total-credits {
+    text-align: right;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--pastel-green);
+    font-size: 1.8em;
+    color: var(--dark-green);
+}
+
+#approved-credits {
+    font-weight: bold;
+    color: var(--pastel-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .semester-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .semester {
+        width: 90%; /* Ocupa más ancho en pantallas pequeñas */
+        max-width: 400px; /* Limita el ancho máximo */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .course {
+        font-size: 0.9em;
+        padding: 10px 15px;
+    }
+}
